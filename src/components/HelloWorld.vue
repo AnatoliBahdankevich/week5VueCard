@@ -1,110 +1,15 @@
 <template>
-  <h1>{{ msg }}</h1>
-
-<!-- My custom code -->
-<button class="outsideBtn" v-on:click="duplicate">Duplicate</button>
-<button class="outsideBtn" v-on:click="background">Background</button>
-<button class="outsideBtn" v-on:click="heading">Heading</button>
-<button class="outsideBtn" v-on:click="deleter">Delete</button>
-
-<div class="card" v-on:mouseover="hoover">
-  <h1 class="title">Chad of Cyber IST</h1>
-
-  <img class="giaImg" src="https://media.discordapp.net/attachments/963095262363017246/1020131830323744788/unknown.png?width=468&height=468" alt="Professor Giacobe">
   
-<div class="textbox">
-  <details>
-    <summary class="haxbtn">Details</summary>
-    <p class="description pScale">Professor Giacobe may look like a simple man but perceptions can be misleading. Underneath the facade of a simple college of IST professor lies the holiness of an <strong>IST GOD</strong>!</p>
-  </details>
+  <div class="card">
 
-  </div>
-</div>
-
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Documentation
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
-  </p>
-
-  <button type="button" @click="state.count++">count is: {{ state.count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
-</template>
-
-<script setup>
-import { defineProps, reactive } from 'vue'
-
-defineProps({
-  msg: String
-})
-
-const state = reactive({ count: 0 })
-</script>
-
-<script>
-
-export default {
-  methods: {
-    hoover() {
-      document.querySelectorAll(".card").forEach((item) => {
-        if(!item.classList.contains("hoverCard")){
-          item.classList.add("hoverCard");
-          console.log(item);
-        }
-        else{
-          item.classList.remove("hoverCard");
-          console.log(item);
-        }
-      });
-    },
+           
+    <h2>Lewis Hamilton</h2>
     
-    duplicate() {
-      const cloneCard = document.querySelector(".card").cloneNode(true);
-      document.body.appendChild(cloneCard);
-      console.log(cloneCard);    
-    },
-
-    background() {
-      document.querySelectorAll(".card").forEach((item) => {
-        if(!item.classList.contains("basic")){
-          item.classList.add("basic");
-          console.log(item);
-        }
-        else{
-          item.classList.remove("basic");
-          console.log(item);
-        }
-      });
-    },
-
-    heading() {
-      document.querySelectorAll(".title").forEach((item) => {   
-        if(item.innerHTML=="something else"){
-          item.innerHTML="Chad of Cyber IST";
-        }
-        else{
-          item.innerHTML="something else";
-        }
-      });
-    },
-
-    //Kinda borked rn
-    deleter(){
-      document.querySelector(".card:last-child").remove();
-      console.log(card);
-    }
-  }
-}
-</script>
-
-<style scoped>
-a {
-  color: #42b983;
-}
-</style>
+          <img src="https://a.espncdn.com/i/headshots/rpm/players/full/868.png" alt="Image Description">
+    <input type="checkbox" id="details-toggle" class="details-toggle">
+        <div class="description">
+            <label for="details-toggle" class="details-label">Details</label>
+            <p>Lewis Hamilton is a British racing legend, renowned for his exceptional skills in Formula 1. With numerous world championships to his name, he's a trailblazer both on and off the track</p>
+   </div>
+  </div> 
+</template>

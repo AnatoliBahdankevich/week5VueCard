@@ -11,129 +11,88 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.card {
+    width: 350px;
+    margin: 10px;
+    padding: 15px;
+    border: 3px solid black;
+}
+
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
 }
 
-.card{
-  border-radius: 24px;
-  border: 3px solid #041E42;
-  padding: 8px;
-  width: 400px;
-  display: block;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0px 8px 24px #999;
-  background-color: lightgrey;
+.card p {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-.textbox{
-  font-size: 15px;
-  margin-left: 112px;
-  text-align: right;
-  border-radius: 24px;
+.details-button {
+   
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
 }
 
-.description{
-  text-shadow: -1px 1px 2px #FFFFFF,
-				  1px 1px 2px #FFFFFF,
-				  1px -1px 0 #FFFFFF,
-				  -1px -1px 0 #FFFFFF;
+
+#duplicateButton:hover,
+#duplicateButton:focus {
+    background-color: #007BFF;
+    color: black;
+    cursor: pointer;
 }
 
-.haxbtn{
-  display:inline-block;
-  text-align: center;
-  color: white;
-  background-color: #041E42;
-  border-radius: 5px;
-  font-size: 20px;
-  width: 120px;
-  height: 32px;
-  box-shadow: 0px 10px 24px #999;
-  border: 1px solid #041E42;
-  visibility: visible;
-  padding-top: 10px;
-  margin-right: 32px;
+.card.toggled-color {
+    background-color: grey;
 }
 
-.haxbtn:hover{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
+
+.details-toggle {
+    display: none;
 }
 
-.haxbtn:focus{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
+.details-label {
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
 }
 
-.title{
-  color: white;
-  font-size: 24px;
-  text-shadow: -1px 1px 2px #000,
-				  1px 1px 2px #000,
-				  1px -1px 0 #000,
-				  -1px -1px 0 #000;
+
+.description p {
+    display: none;
 }
 
-.giaImg{
-  width: 200px;
-  border-radius: 24px;
-  box-shadow: 0px 10px 24px #999;
-  float: left;
+.details-toggle:checked + .description p {
+    display: block;
 }
 
-.outsideBtn{
-  color: white;
-  background-color: #041E42;
-  border-radius: 5px;
-  font-size: 20px;
-  width: 120px;
-  height: 50px;
-  box-shadow: 0px 10px 24px #999;
-  border: 1px solid #041E42;
-  margin-right: 32px;
-  margin-bottom: 16px;
-  display: inline-block;
+@media (max-width: 800px) and (min-width: 500px){
+    .details-button {
+        display: inline-block;
+    }
 }
 
-.outsideBtn:hover{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
+
+@media (max-width: 500px) {
+    .card {
+        max-width: 300px;
+    }
 }
 
-.outsideBtn:focus{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
+@media screen and (max-width: 800px) {
+    .details-button {
+        display: none;
+    }
 }
-
-.basic{
-  background-color: hotpink;
-}
-
-.hoverCard{
-  border: 3px solid purple;
-  box-shadow: 0px 8px 24px yellow;
-}
-
-input:checked + label + .description { display:none; }
-
 
 
 </style>
